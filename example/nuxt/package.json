@@ -5,8 +5,8 @@
     "dev": "nuxt dev"
   },
   "dependencies": {
+    "@druxt-contrib/config-pages": "link:../..",
     "druxt": "latest",
-    "druxt-config-pages": "link:../..",
     "nuxt": "latest"
   }
 }

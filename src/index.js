@@ -7,15 +7,16 @@ const NuxtModule = async function (moduleOptions = {}) {
   const options = {
     baseUrl: moduleOptions.baseUrl,
     ...(this.options || {}).druxt || {},
-    configPages: [
-      ...moduleOptions.configPages || [],
-      ...((this.options || {}).druxt || {}).configPages || [],
-    ]
+    configPages: {
+      pages: [],
+      ...moduleOptions.configPages || {},
+      ...((this.options || {}).druxt || {}).configPages || {},
+    }
   }
 
   // Ensure the module is configured correctly.
   // @TODO - Load all available config pages?
-  if (!options.configPages.length) {
+  if (!options.configPages.pages.length) {
     throw new Error('DruxtConfigPages: The configPages array requires atleast one entry.')
   }
 
@@ -24,7 +25,7 @@ const NuxtModule = async function (moduleOptions = {}) {
 
   // Get requested Config Pages data.
   const configPages = {}
-  for (const page of options.configPages) {
+  for (const page of options.configPages.pages) {
     const { data } = await druxt.getCollection(`config_pages--${page}`)
     // Ensure the requested config exists.
     if (!(data || [])[0]) throw new Error(`DruxtConfigPages: No data found for config page '${page}'.`)

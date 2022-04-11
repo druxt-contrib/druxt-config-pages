@@ -1,5 +1,5 @@
 {
-  "name": "druxt-config-pages",
+  "name": "@druxt-contrib/config-pages",
   "version": "0.0.0",
   "keywords": [
     "druxt",

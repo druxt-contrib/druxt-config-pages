@@ -4,11 +4,13 @@ const baseUrl = process.env.GITPOD_WORKSPACE_ID
 
 export default {
   buildModules: [
+    '@druxt-contrib/config-pages',
     'druxt',
-    'druxt-config-pages'
   ],
   druxt: {
     baseUrl,
-    configPages: ['test']
+    configPages: {
+      pages: ['test']
+    }
   }
 }
