@@ -7,7 +7,7 @@ const options = {
 
 let mock
 
-describe('DruxtModule Nuxt module', () => {
+describe('DruxtConfigPages Nuxt module', () => {
   beforeEach(() => {
     mock = {
       addModule: jest.fn(),
@@ -28,11 +28,5 @@ describe('DruxtModule Nuxt module', () => {
 
     // Call Druxt module with module options.
     NuxtModule.call(mock, options)
-
-    // Expect that:
-    // - The components:dirs hook was invoked.
-    // - One directory is present.
-    expect(mock.nuxt.hook).toHaveBeenCalledWith('components:dirs', expect.any(Function))
-    expect(dirs.length).toBe(1)
   })
 })

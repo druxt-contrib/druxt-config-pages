@@ -1,6 +1,6 @@
 {
-  "name": "druxt/module-template",
-  "description": "Drupal 9 codebase for the DruxtModule template example.",
+  "name": "decipher/druxt-config-pages",
+  "description": "Drupal 9 codebase for the DruxtConfigPages example.",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "homepage": "https://druxtjs.org",

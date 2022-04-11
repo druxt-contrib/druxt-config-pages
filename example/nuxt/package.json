@@ -1,12 +1,12 @@
 {
-  "name": "druxt-module-template-example",
+  "name": "druxt-config-pages-example",
   "version": "0.0.0",
   "scripts": {
     "dev": "nuxt dev"
   },
   "dependencies": {
     "druxt": "latest",
-    "druxt-module-template": "link:../..",
+    "druxt-config-pages": "link:../..",
     "nuxt": "latest"
   }
 }
