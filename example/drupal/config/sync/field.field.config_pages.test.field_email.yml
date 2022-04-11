@@ -1,0 +1,19 @@
+uuid: 3c644226-2424-4f49-800f-077a1e738e0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test
+    - field.storage.config_pages.field_email
+id: config_pages.test.field_email
+field_name: field_email
+entity_type: config_pages
+bundle: test
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

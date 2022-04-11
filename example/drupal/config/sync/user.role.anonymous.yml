@@ -6,6 +6,7 @@ dependencies:
     - filter.format.restricted_html
   module:
     - comment
+    - config_pages
     - contact
     - druxt
     - filter
@@ -24,3 +25,4 @@ permissions:
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view test config page entity'
