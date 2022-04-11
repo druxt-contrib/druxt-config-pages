@@ -4,16 +4,24 @@
     <h2>Text config:</h2>
     <dl>
       <dt>Boolean</dt>
-      <dd>{{ $store.state.druxtConfigPages.test.attributes.field_boolean }}</dd>
+      <dd>{{ config.boolean }}</dd>
 
       <dt>Date</dt>
-      <dd>{{ $store.state.druxtConfigPages.test.attributes.field_date }}</dd>
+      <dd>{{ config.date }}</dd>
 
       <dt>Email</dt>
-      <dd>{{ $store.state.druxtConfigPages.test.attributes.field_email }}</dd>
+      <dd>{{ config.email }}</dd>
 
       <dt>Text</dt>
-      <dd>{{ $store.state.druxtConfigPages.test.attributes.field_text }}</dd>
+      <dd>{{ config.text }}</dd>
     </dl>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    config: ({ $druxtConfigPages }) => $druxtConfigPages.get('test')
+  }
+}
+</script>

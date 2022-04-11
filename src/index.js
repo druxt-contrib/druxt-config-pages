@@ -21,18 +21,19 @@ const NuxtModule = async function (moduleOptions = {}) {
 
   // Get requested Config Pages data.
   const druxt = new DruxtClient(options.baseUrl, options)
-  const config = Object.fromEntries((await Promise.all(options.configPages.map((configPage) => druxt.getCollection(`config_pages--${configPage}`))) || [])
+  const configPages = Object.fromEntries((await Promise.all(options.configPages.map((configPage) => druxt.getCollection(`config_pages--${configPage}`))) || [])
     .map((o) => [o.data[0].type.split('--')[1], o.data[0]]))
-
 
   // Enable Vuex Store.
   this.options.store = true
 
   // Add Vuex plugin.
   this.addPlugin({
-    src: resolve(__dirname, '../templates/store.js'),
+    src: resolve(__dirname, '../templates/plugin.js'),
     fileName: 'store/druxt-config-pages.js',
-    options: config
+    options: {
+      configPages
+    }
   })
 }
 
