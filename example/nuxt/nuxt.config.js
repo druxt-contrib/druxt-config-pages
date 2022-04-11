@@ -7,5 +7,8 @@ export default {
     'druxt',
     'druxt-config-pages'
   ],
-  druxt: { baseUrl }
+  druxt: {
+    baseUrl,
+    configPages: ['test']
+  }
 }
