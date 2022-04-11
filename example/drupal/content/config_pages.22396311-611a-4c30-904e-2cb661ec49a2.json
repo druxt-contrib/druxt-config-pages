@@ -23,7 +23,7 @@
     ],
     "changed": [
         {
-            "value": "2022-04-11T06:50:50+00:00",
+            "value": "2022-04-11T22:31:32+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -40,6 +40,14 @@
     "field_email": [
         {
             "value": "admin@example.com"
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "DruxtJS - The Fully Decoupled Drupal framework",
+            "target_type": "file",
+            "target_uuid": "f2a70ed3-1dc3-4b60-ab45-f9821df19701"
         }
     ],
     "field_text": [

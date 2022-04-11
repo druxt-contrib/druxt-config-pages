@@ -7,9 +7,11 @@ dependencies:
     - field.field.config_pages.test.field_boolean
     - field.field.config_pages.test.field_date
     - field.field.config_pages.test.field_email
+    - field.field.config_pages.test.field_file
     - field.field.config_pages.test.field_text
   module:
     - datetime
+    - file
 id: config_pages.test.default
 targetEntityType: config_pages
 bundle: test
@@ -40,6 +42,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_text:
     type: string

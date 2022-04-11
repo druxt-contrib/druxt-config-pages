@@ -3,5 +3,10 @@
     "shortcut.92a7e031-80ca-4399-a0f1-39090682ffe8": [],
     "user.ebfa7bc7-06a4-4954-994c-6c0a60fd7e7d": [],
     "user.f9e9be4c-b28b-4998-b711-e7f80e0467aa": [],
-    "config_pages.22396311-611a-4c30-904e-2cb661ec49a2": []
+    "config_pages.22396311-611a-4c30-904e-2cb661ec49a2": [
+        "file.f2a70ed3-1dc3-4b60-ab45-f9821df19701"
+    ],
+    "file.f2a70ed3-1dc3-4b60-ab45-f9821df19701": [
+        "user.ebfa7bc7-06a4-4954-994c-6c0a60fd7e7d"
+    ]
 }

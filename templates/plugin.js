@@ -1,12 +1,20 @@
 const get = (page) => (state) => {
+  // Reduce relationship data.
+  const relationships = Object.fromEntries(
+    Object.entries(state[page].relationships || {})
+      .map(([key, value]) => [key, value.data])
+  )
+
+  // Reduce and transform configuration data.
   const data = Object.fromEntries(
     Object.entries({
       ...(state[page].attributes || {}),
-      ...(state[page].relationships || {}),
+      ...relationships,
     })
     .filter(([key]) => key.startsWith('field_'))
     .map(([key, value]) => ([key.replace('field_', ''), value]))
   )
+
   return data
 }
 

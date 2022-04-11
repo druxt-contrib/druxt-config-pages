@@ -16,13 +16,20 @@ const NuxtModule = async function (moduleOptions = {}) {
   // Ensure the module is configured correctly.
   // @TODO - Load all available config pages?
   if (!options.configPages.length) {
-    throw new Error('DruxtConfigPages is missing required configuration.')
+    throw new Error('DruxtConfigPages: The configPages array requires atleast one entry.')
   }
 
-  // Get requested Config Pages data.
+  // Setup the DruxtClient.
   const druxt = new DruxtClient(options.baseUrl, options)
-  const configPages = Object.fromEntries((await Promise.all(options.configPages.map((configPage) => druxt.getCollection(`config_pages--${configPage}`))) || [])
-    .map((o) => [o.data[0].type.split('--')[1], o.data[0]]))
+
+  // Get requested Config Pages data.
+  const configPages = {}
+  for (const page of options.configPages) {
+    const { data } = await druxt.getCollection(`config_pages--${page}`)
+    // Ensure the requested config exists.
+    if (!(data || [])[0]) throw new Error(`DruxtConfigPages: No data found for config page '${page}'.`)
+    configPages[page] = data[0]
+  }
 
   // Enable Vuex Store.
   this.options.store = true
