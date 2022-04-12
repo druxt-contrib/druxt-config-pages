@@ -1,9 +1,9 @@
 # DruxtConfigPages
 
 [![npm](https://badgen.net/npm/v/@druxt-contrib/config-pages)](https://www.npmjs.com/package/@druxt-contrib/config-pages)
-[![Known Vulnerabilities](https://snyk.io/test/github/Decipher/druxt-config-pages/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Decipher/druxt-config-pages?targetFile=package.json)
-[![CI](https://github.com/Decipher/druxt-config-pages/actions/workflows/ci.yml/badge.svg)](https://github.com/Decipher/druxt-config-pages/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/Decipher/druxt-config-pages/branch/main/graph/badge.svg?token=TwCLJOKEjm)](https://codecov.io/gh/Decipher/druxt-config-pages)
+[![Known Vulnerabilities](https://snyk.io/test/github/druxt-contrib/druxt-config-pages/badge.svg?targetFile=package.json)](https://snyk.io/test/github/druxt-contrib/druxt-config-pages?targetFile=package.json)
+[![CI](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml/badge.svg)](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/druxt-contrib/druxt-config-pages/branch/main/graph/badge.svg?token=TwCLJOKEjm)](https://codecov.io/gh/druxt-contrib/druxt-config-pages)
 
 > Decoupled Drupal configuration pages for Druxt
 
@@ -40,9 +40,9 @@ $druxtConfigPages.get('foo.bar')
 
 ### Nuxt.js
 
-1. Install the Nuxt module:
+1. Install the Nuxt modules:
 
-    `$ npm install @druxt-contrib/config-pages`
+    `$ npm install druxt @druxt-contrib/config-pages`
 
 2. Add module to `nuxt.config.js`
 
