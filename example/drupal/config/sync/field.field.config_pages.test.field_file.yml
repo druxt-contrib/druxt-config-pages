@@ -1,0 +1,27 @@
+uuid: 13035889-1af7-4395-86cb-b7770cb86964
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test
+    - field.storage.config_pages.field_file
+  module:
+    - file
+id: config_pages.test.field_file
+field_name: field_file
+entity_type: config_pages
+bundle: test
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'jpg png gif'
+  max_filesize: ''
+  description_field: true
+field_type: file

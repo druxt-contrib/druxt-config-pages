@@ -1,0 +1,58 @@
+{
+    "uuid": [
+        {
+            "value": "22396311-611a-4c30-904e-2cb661ec49a2"
+        }
+    ],
+    "label": [
+        {
+            "value": "Test"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "test",
+            "target_type": "config_pages_type",
+            "target_uuid": "af2ff73e-f76a-429f-a649-a1380347f8c5"
+        }
+    ],
+    "context": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2022-04-11T22:31:32+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_boolean": [
+        {
+            "value": true
+        }
+    ],
+    "field_date": [
+        {
+            "value": "2022-04-11T16:50:00+00:00"
+        }
+    ],
+    "field_email": [
+        {
+            "value": "admin@example.com"
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "DruxtJS - The Fully Decoupled Drupal framework",
+            "target_type": "file",
+            "target_uuid": "f2a70ed3-1dc3-4b60-ab45-f9821df19701"
+        }
+    ],
+    "field_text": [
+        {
+            "value": "Text value"
+        }
+    ]
+}

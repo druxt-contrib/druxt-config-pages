@@ -1,62 +1,67 @@
-# DruxtModule (template)
+# DruxtConfigPages
 
-<!--
-[![npm](https://badgen.net/npm/v/druxt-module)](https://www.npmjs.com/package/druxt-module)
-[![Known Vulnerabilities](https://snyk.io/test/github/druxt/druxt-auth/badge.svg?targetFile=package.json)](https://snyk.io/test/github/druxt/druxt-auth?targetFile=package.json)
--->
-[![CI](https://github.com/druxt/module-template/actions/workflows/ci.yml/badge.svg)](https://github.com/druxt/module-template/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/druxt/module-template/branch/main/graph/badge.svg?token=TwCLJOKEjm)](https://codecov.io/gh/druxt/module-template)
+[![npm](https://badgen.net/npm/v/@druxt-contrib/config-pages)](https://www.npmjs.com/package/@druxt-contrib/config-pages)
+[![Known Vulnerabilities](https://snyk.io/test/github/Decipher/druxt-config-pages/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Decipher/druxt-config-pages?targetFile=package.json)
+[![CI](https://github.com/Decipher/druxt-config-pages/actions/workflows/ci.yml/badge.svg)](https://github.com/Decipher/druxt-config-pages/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/Decipher/druxt-config-pages/branch/main/graph/badge.svg?token=TwCLJOKEjm)](https://codecov.io/gh/Decipher/druxt-config-pages)
 
-> This is a template for creating a DruxtJS module.
+> Decoupled Drupal configuration pages for Druxt
+
+The DruxtConfigPages module consumes configuration data from the Drupal Config
+Pages module and makes it easily accessible with a Vuex store and Nuxt plugin.
+
+```js
+$druxtConfigPages.get('foo.bar')
+```
+
+## Features
+
+- Nuxt plugin:
+  - `$druxtConfigPages.get('foo').bar`
+  - `$druxtConfigPages.get('foo.bar')`
+- Vuex store and getter:
+  - `$store.getters['druxtConfigPages/foo'].bar`
 
 ## Links
 
 - DruxtJS: https://druxtjs.org
 - Community Discord server: https://discord.druxtjs.org
+- Config Pages project page: https://www.drupal.org/project/config_pages
 
-## Getting started
+## Install and setup
+### Drupal
 
-1. **Use this template**
+1. Install and enable the [Drupal Config Pages module](https://www.drupal.org/project/config_pages) on your Druxt backend. 
 
-    Click the **Use this template** button in GitHub and follow the on-screen instructions to **Create a new repository**.
+2. Create at least one Config Page type and entity:
+    `/admin/structure/config_pages/types`
 
-2. **Build, dev, test, commit**
-
-    This repository is setup with for development using the following tools:
-
-    - [Siroc](https://github.com/unjs/siroc): `npm run build`
-    - [Jest](https://jestjs.io/): `npm test`
-    - Linting tools: `npm run lint`
-    - [Changesets](https://github.com/changesets/changesets): `npm run changesets`
-
-3. **Contribute**
-
-    Have a module you want to share with the Druxt community? Let us know via the [Community Discord server](https://discord.druxtjs.org).
-
-
-<!-- TODO - Update this for your module
-
-## Install
-
-`$ npm install druxt-module`
+3. Add the **"View the [foo] config page entity"** permission to the required Druxt role(s). 
 
 ### Nuxt.js
 
-Add module to `nuxt.config.js`
+1. Install the Nuxt module:
 
-```js
-module.exports = {
-  buildModules: ['druxt-module'],
-  druxt: {
-    baseUrl: 'https://demo-api.druxtjs.org'
-  }
-}
-```
+    `$ npm install @druxt-contrib/config-pages`
+
+2. Add module to `nuxt.config.js`
+
+    ```js
+    module.exports = {
+      buildModules: ['@druxt-contrib/config-pages'],
+      druxt: {
+        baseUrl: 'https://demo-api.druxtjs.org',
+        configPages: {
+          pages: ['foo']
+        }
+      }
+    }
+    ```
+
+    Note: Replace `foo` with the machine name of your Config Page type.
 
 ## Options
 
 | Option | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `druxt.module.foo` | `string` | No | `bar` | ... |
-
--->
+| `druxt.configPages.pages` | `array` | Yes | `[]` | An array of Config Page types. |
