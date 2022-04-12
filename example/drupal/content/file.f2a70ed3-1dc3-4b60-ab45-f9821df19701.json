@@ -1,0 +1,55 @@
+{
+    "uuid": [
+        {
+            "value": "f2a70ed3-1dc3-4b60-ab45-f9821df19701"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ebfa7bc7-06a4-4954-994c-6c0a60fd7e7d"
+        }
+    ],
+    "filename": [
+        {
+            "value": "DruxtJS.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2022-04\/DruxtJS.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 93420
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2022-04-11T22:30:28+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2022-04-11T22:30:34+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

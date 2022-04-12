@@ -1,6 +1,6 @@
-# DruxtModule example
+# DruxtConfigPages example
 
-This directory contains the Drupal and Nuxt codebases to demonstrate the DruxtModule (template) module.
+This directory contains the Drupal and Nuxt codebases to demonstrate the DruxtConfigPages module.
 
 ## Get started
 

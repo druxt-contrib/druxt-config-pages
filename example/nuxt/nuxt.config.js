@@ -1,11 +1,16 @@
 const baseUrl = process.env.GITPOD_WORKSPACE_ID
   ? `https://8080-${process.env.GITPOD_WORKSPACE_ID}.${process.env.GITPOD_WORKSPACE_CLUSTER_HOST}`
-  : 'http://druxt-module-template.ddev.site'
+  : 'http://druxt-config-pages.ddev.site'
 
 export default {
   buildModules: [
+    '@druxt-contrib/config-pages',
     'druxt',
-    'druxt-module-template'
   ],
-  druxt: { baseUrl }
+  druxt: {
+    baseUrl,
+    configPages: {
+      pages: ['test']
+    }
+  }
 }

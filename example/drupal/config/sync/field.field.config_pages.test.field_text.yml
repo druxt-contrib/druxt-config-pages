@@ -1,0 +1,19 @@
+uuid: 96ae56f3-b3ae-4fdf-ad57-083978c65dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test
+    - field.storage.config_pages.field_text
+id: config_pages.test.field_text
+field_name: field_text
+entity_type: config_pages
+bundle: test
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

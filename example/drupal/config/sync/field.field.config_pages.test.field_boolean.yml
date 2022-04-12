@@ -1,0 +1,23 @@
+uuid: 4145a07d-e43d-439f-b448-f5900eb7aac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test
+    - field.storage.config_pages.field_boolean
+id: config_pages.test.field_boolean
+field_name: field_boolean
+entity_type: config_pages
+bundle: test
+label: Boolean
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,57 @@
+uuid: 9c2bc0c7-1708-4f60-b35b-69fc3b08889e
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test
+    - field.field.config_pages.test.field_boolean
+    - field.field.config_pages.test.field_date
+    - field.field.config_pages.test.field_email
+    - field.field.config_pages.test.field_file
+    - field.field.config_pages.test.field_text
+  module:
+    - datetime
+    - file
+id: config_pages.test.default
+targetEntityType: config_pages
+bundle: test
+mode: default
+content:
+  field_boolean:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_file:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true
