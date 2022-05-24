@@ -1,5 +1,11 @@
 # @druxt-contrib/config-pages
 
+## 0.1.2
+
+### Patch Changes
+
+- a99c00a: Fixed error when API Proxy enabled.
+
 ## 0.1.1
 
 ### Patch Changes
