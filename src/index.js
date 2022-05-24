@@ -21,7 +21,11 @@ const NuxtModule = async function (moduleOptions = {}) {
   }
 
   // Setup the DruxtClient.
-  const druxt = new DruxtClient(options.baseUrl, options)
+  const druxt = new DruxtClient(options.baseUrl, {
+    ...options,
+    // Disable API Proxy, as Proxies aren't available at build.
+    proxy: { ...options.proxy || {}, api: false },
+  })
 
   // Get requested Config Pages data.
   const configPages = {}

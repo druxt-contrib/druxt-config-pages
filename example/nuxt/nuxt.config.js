@@ -9,6 +9,7 @@ export default {
   ],
   druxt: {
     baseUrl,
+    proxy: { api: true },
     configPages: {
       pages: ['test']
     }
