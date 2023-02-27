@@ -1,5 +1,11 @@
 # @druxt-contrib/config-pages
 
+## 0.1.3
+
+### Patch Changes
+
+- 0d28d28: fix(#20): fixed bug with getters when using multiple config pages.
+
 ## 0.1.2
 
 ### Patch Changes
