@@ -28,7 +28,7 @@ export default ({ app, store }, inject) => {
 
     getters: {
 <% for (page of Object.keys(options.configPages)) { %>
-      <%= page %>: get('<%= page %>')
+      <%= page %>: get('<%= page %>'),
 <% } %>
     }
   }
