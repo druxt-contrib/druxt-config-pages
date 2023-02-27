@@ -1,0 +1,23 @@
+uuid: cdeab64d-c160-4aab-a6a7-3bbd74297c91
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test_two
+    - field.storage.config_pages.field_boolean
+id: config_pages.test_two.field_boolean
+field_name: field_boolean
+entity_type: config_pages
+bundle: test_two
+label: Boolean
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

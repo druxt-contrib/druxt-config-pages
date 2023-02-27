@@ -30,3 +30,4 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view test config page entity'
+  - 'view test_two config page entity'

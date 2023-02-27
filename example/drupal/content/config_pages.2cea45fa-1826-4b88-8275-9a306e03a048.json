@@ -1,0 +1,51 @@
+{
+    "uuid": [
+        {
+            "value": "2cea45fa-1826-4b88-8275-9a306e03a048"
+        }
+    ],
+    "label": [
+        {
+            "value": "Test two"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "test_two",
+            "target_type": "config_pages_type",
+            "target_uuid": "c9d0c8ff-4a42-47e9-9c17-28acafed1a63"
+        }
+    ],
+    "context": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-02-27T02:05:58+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_boolean": [
+        {
+            "value": true
+        }
+    ],
+    "field_date": [
+        {
+            "value": "2023-02-27T16:50:00+00:00"
+        }
+    ],
+    "field_email": [
+        {
+            "value": "admin@example.com"
+        }
+    ],
+    "field_file": [],
+    "field_text": [
+        {
+            "value": "Text value"
+        }
+    ]
+}

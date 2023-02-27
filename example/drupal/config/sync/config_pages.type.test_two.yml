@@ -1,9 +1,9 @@
-uuid: af2ff73e-f76a-429f-a649-a1380347f8c5
+uuid: c9d0c8ff-4a42-47e9-9c17-28acafed1a63
 langcode: en
 status: true
 dependencies: {  }
-id: test
-label: 'Test one'
+id: test_two
+label: 'Test two'
 token: false
 context:
   show_warning: true

@@ -11,7 +11,7 @@ export default {
     baseUrl,
     proxy: { api: true },
     configPages: {
-      pages: ['test']
+      pages: ['test', 'test_two']
     }
   }
 }
