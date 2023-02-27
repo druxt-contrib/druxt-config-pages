@@ -1,0 +1,27 @@
+uuid: d613a640-826f-4486-b88a-23c19a8f3bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test_two
+    - field.storage.config_pages.field_file
+  module:
+    - file
+id: config_pages.test_two.field_file
+field_name: field_file
+entity_type: config_pages
+bundle: test_two
+label: File
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,21 @@
+uuid: a9a139ed-e3e3-4c1f-a32a-f31b19e3624e
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.test_two
+    - field.storage.config_pages.field_date
+  module:
+    - datetime
+id: config_pages.test_two.field_date
+field_name: field_date
+entity_type: config_pages
+bundle: test_two
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

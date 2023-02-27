@@ -26,3 +26,4 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view test config page entity'
+  - 'view test_two config page entity'
