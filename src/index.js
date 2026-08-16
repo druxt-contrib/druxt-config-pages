@@ -1,6 +1,9 @@
 import { DruxtClient } from 'druxt'
 import { resolve } from 'path'
 
+// Config page data cache, keyed by base URL and page. Data is build-time static.
+const cache = {}
+
 // eslint-disable-next-line no-unused-vars
 const NuxtModule = async function (moduleOptions = {}) {
   // Set default options.
@@ -32,6 +35,11 @@ const NuxtModule = async function (moduleOptions = {}) {
   // Get requested Config Pages data.
   const configPages = {}
   for (const page of options.configPages.pages) {
+    const cacheKey = [options.baseUrl, page].join(':')
+    if (cache[cacheKey]) {
+      configPages[page] = cache[cacheKey]
+      continue
+    }
     const { data } = await druxt.getCollection(`config_pages--${page}`)
     // Ensure the requested config exists.
     if (!(data || [])[0])
@@ -39,6 +47,7 @@ const NuxtModule = async function (moduleOptions = {}) {
         `DruxtConfigPages: No data found for config page '${page}'.`
       )
     configPages[page] = data[0]
+    cache[cacheKey] = data[0]
   }
 
   // Enable Vuex Store.
