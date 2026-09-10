@@ -4,29 +4,30 @@ import NuxtModule from '../src'
 const options = {
   baseUrl: 'http://druxt-config-pages.ddev.site',
   configPages: {
-    pages: ['foo']
-  }
+    pages: ['foo'],
+  },
 }
 
 let mock
 
-const mockData = [{
-  attributes: {
-    field_bar: true
+const mockData = [
+  {
+    attributes: {
+      field_bar: true,
+    },
+    relationships: {
+      field_file: {
+        data: { id: '1', type: 'file--file' },
+      },
+    },
   },
-  relationships: {
-    field_file: {
-      data: { id: '1', type: 'file--file' }
-    }
-  }
-}]
+]
 jest.mock('druxt', () => ({
   DruxtClient: jest.fn().mockImplementation(() => ({
-    getCollection: jest.fn((resourceType) => resourceType.endsWith('bad')
-      ? {}
-      : { data: mockData }
-    )
-  }))
+    getCollection: jest.fn((resourceType) =>
+      resourceType.endsWith('bad') ? {} : { data: mockData }
+    ),
+  })),
 }))
 
 describe('DruxtConfigPages Nuxt module', () => {
@@ -40,7 +41,7 @@ describe('DruxtConfigPages Nuxt module', () => {
         hook: jest.fn(),
       },
       options: {},
-      NuxtModule
+      NuxtModule,
     }
   })
 
@@ -58,7 +59,9 @@ describe('DruxtConfigPages Nuxt module', () => {
     try {
       await NuxtModule.call(mock, options)
     } catch (err) {
-      expect(err.message).toBe("DruxtConfigPages: The configPages array requires atleast one entry.")
+      expect(err.message).toBe(
+        'DruxtConfigPages: The configPages array requires at least one entry.'
+      )
     }
 
     // Call Druxt module with bad module options.
@@ -66,7 +69,9 @@ describe('DruxtConfigPages Nuxt module', () => {
       options.configPages = { pages: ['bad'] }
       await NuxtModule.call(mock, options)
     } catch (err) {
-      expect(err.message).toBe("DruxtConfigPages: No data found for config page 'bad'.")
+      expect(err.message).toBe(
+        "DruxtConfigPages: No data found for config page 'bad'."
+      )
     }
   })
 })
