@@ -1,3 +1,10 @@
+<!-- vale off -->
+<!-- The alt text describes what the banner shows: the @druxt-contrib/config-pages mark, name and description. The name-colon-description form trips ColonUsage. -->
+<a href="https://druxtjs.org">
+  <img src=".github/banner.svg" alt="@druxt-contrib/config-pages: Config Pages module for Druxt">
+</a>
+<!-- vale on -->
+
 # DruxtConfigPages
 
 [![npm](https://badgen.net/npm/v/@druxt-contrib/config-pages)](https://www.npmjs.com/package/@druxt-contrib/config-pages)
