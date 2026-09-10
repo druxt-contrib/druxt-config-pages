@@ -24,44 +24,45 @@ $druxtConfigPages.get('foo.bar')
 
 ## Links
 
-- DruxtJS: https://druxtjs.org
-- Community Discord server: https://discord.druxtjs.org
-- Config Pages project page: https://www.drupal.org/project/config_pages
+- [DruxtJS](https://druxtjs.org)
+- [Community Discord server](https://discord.druxtjs.org)
+- [Config Pages project page](https://www.drupal.org/project/config_pages)
 
 ## Install and setup
+
 ### Drupal
 
-1. Install and enable the [Drupal Config Pages module](https://www.drupal.org/project/config_pages) on your Druxt backend. 
+1. Install and enable the [Drupal Config Pages module](https://www.drupal.org/project/config_pages) on your Druxt backend.
 
 2. Create at least one Config Page type and entity:
-    `/admin/structure/config_pages/types`
+   `/admin/structure/config_pages/types`
 
-3. Add the **"View the [foo] config page entity"** permission to the required Druxt role(s). 
+3. Add the **"View the [foo] config page entity"** permission to the required Druxt role(s).
 
 ### Nuxt.js
 
 1. Install the Nuxt modules:
 
-    `$ npm install druxt @druxt-contrib/config-pages`
+   `$ npm install druxt @druxt-contrib/config-pages`
 
 2. Add module to `nuxt.config.js`
 
-    ```js
-    module.exports = {
-      buildModules: ['@druxt-contrib/config-pages'],
-      druxt: {
-        baseUrl: 'https://demo-api.druxtjs.org',
-        configPages: {
-          pages: ['foo']
-        }
-      }
-    }
-    ```
+   ```js
+   module.exports = {
+     buildModules: ['@druxt-contrib/config-pages'],
+     druxt: {
+       baseUrl: 'https://demo-api.druxtjs.org',
+       configPages: {
+         pages: ['foo'],
+       },
+     },
+   }
+   ```
 
-    Note: Replace `foo` with the machine name of your Config Page type.
+   Replace `foo` with the machine name of your Config Page type.
 
 ## Options
 
-| Option | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- |
-| `druxt.configPages.pages` | `array` | Yes | `[]` | An array of Config Page types. |
+| Option                    | Type    | Required | Default | Description                    |
+| ------------------------- | ------- | -------- | ------- | ------------------------------ |
+| `druxt.configPages.pages` | `array` | Yes      | `[]`    | An array of Config Page types. |

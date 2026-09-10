@@ -3,15 +3,12 @@ const baseUrl = process.env.GITPOD_WORKSPACE_ID
   : 'http://druxt-config-pages.ddev.site'
 
 export default {
-  buildModules: [
-    '@druxt-contrib/config-pages',
-    'druxt',
-  ],
+  buildModules: ['@druxt-contrib/config-pages', 'druxt'],
   druxt: {
     baseUrl,
     proxy: { api: true },
     configPages: {
-      pages: ['test', 'test_two']
-    }
-  }
+      pages: ['test', 'test_two'],
+    },
+  },
 }
