@@ -1,5 +1,6 @@
 import 'regenerator-runtime/runtime'
 import NuxtModule from '../src'
+import { DruxtClient } from 'druxt'
 
 const options = {
   baseUrl: 'http://druxt-config-pages.ddev.site',
@@ -73,5 +74,20 @@ describe('DruxtConfigPages Nuxt module', () => {
         "DruxtConfigPages: No data found for config page 'bad'."
       )
     }
+  })
+
+  test('Cached per process', async () => {
+    // Use a page unique to this test so earlier tests don't warm the cache.
+    options.configPages = { pages: ['baz'] }
+
+    // First build fetches and caches the config page.
+    await NuxtModule.call(mock, options)
+    let druxt = DruxtClient.mock.results.slice(-1)[0].value
+    expect(druxt.getCollection).toHaveBeenCalledTimes(1)
+
+    // A second build in the same process makes no further requests.
+    await NuxtModule.call(mock, options)
+    druxt = DruxtClient.mock.results.slice(-1)[0].value
+    expect(druxt.getCollection).toHaveBeenCalledTimes(0)
   })
 })
