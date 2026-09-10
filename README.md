@@ -51,7 +51,7 @@ $druxtConfigPages.get('foo.bar')
    module.exports = {
      buildModules: ['@druxt-contrib/config-pages'],
      druxt: {
-       baseUrl: 'https://demo-api.druxtjs.org',
+       baseUrl: 'https://cms.example.com',
        configPages: {
          pages: ['foo'],
        },
