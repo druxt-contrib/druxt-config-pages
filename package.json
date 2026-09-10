@@ -12,6 +12,7 @@
     "module",
     "nuxt"
   ],
+  "license": "MIT",
   "repository": "github:druxt-contrib/druxt-config-pages",
   "exports": {
     ".": {
