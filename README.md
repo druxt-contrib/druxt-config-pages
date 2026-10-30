@@ -7,10 +7,12 @@
 
 # DruxtConfigPages
 
-[![npm](https://badgen.net/npm/v/@druxt-contrib/config-pages)](https://www.npmjs.com/package/@druxt-contrib/config-pages)
+[![npm](https://img.shields.io/npm/v/@druxt-contrib/config-pages)](https://www.npmjs.com/package/@druxt-contrib/config-pages)
+[![npm@dev](https://img.shields.io/npm/v/@druxt-contrib/config-pages/dev)](https://www.npmjs.com/package/@druxt-contrib/config-pages/v/dev)
+[![CI](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/druxt-contrib/druxt-config-pages/branch/develop/graph/badge.svg)](https://codecov.io/gh/druxt-contrib/druxt-config-pages)
 [![Known Vulnerabilities](https://snyk.io/test/github/druxt-contrib/druxt-config-pages/badge.svg?targetFile=package.json)](https://snyk.io/test/github/druxt-contrib/druxt-config-pages?targetFile=package.json)
-[![CI](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml/badge.svg)](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/druxt-contrib/druxt-config-pages/branch/main/graph/badge.svg?token=TwCLJOKEjm)](https://codecov.io/gh/druxt-contrib/druxt-config-pages)
+[![Discord](https://img.shields.io/discord/753866667590680587?label=discord&logo=discord&logoColor=white)](https://discord.druxtjs.org)
 
 > Decoupled Drupal configuration pages for Druxt
 
