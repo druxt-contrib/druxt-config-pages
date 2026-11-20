@@ -34,12 +34,12 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
-    "@babel/core": "7.20.2",
-    "@babel/preset-env": "7.20.2",
-    "@changesets/cli": "2.25.2",
-    "@vue/test-utils": "2.2.3",
+    "@babel/core": "7.29.13",
+    "@babel/preset-env": "7.29.14",
+    "@changesets/cli": "2.31.1",
+    "@vue/test-utils": "2.6.0",
     "babel-core": "7.0.0-bridge.0",
-    "druxt": "^0.21.0",
+    "druxt": "^0.25.1",
     "esbuild-jest": "0.5.0",
     "eslint": "8.28.0",
     "eslint-plugin-nuxt": "3.2.0",
@@ -50,7 +50,7 @@
     "vue-template-compiler": "2.7.14"
   },
   "peerDependencies": {
-    "druxt": "^0.21.0"
+    "druxt": "^0.25.1"
   },
   "publishConfig": {
     "access": "public"
