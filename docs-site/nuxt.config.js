@@ -97,7 +97,7 @@ export default {
         // Where a link that leaves docs/ points instead: the same file on
         // GitHub, which is the only place the site can send a reader for it.
         repoUrl: 'https://github.com/druxt-contrib/druxt-config-pages',
-        gitRef: 'develop',
+        gitRef: '0.x',
         // Where this site is published, for the sitemap and llms.txt. It has
         // no default: a build's own environment could answer it, and that
         // answer goes wrong the moment a custom domain is set.

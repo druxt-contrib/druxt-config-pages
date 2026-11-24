@@ -1,7 +1,7 @@
 <!-- vale off -->
 <!-- The alt text describes what the banner shows: the @druxt-contrib/config-pages mark, name and description. The name-colon-description form trips ColonUsage. -->
 <a href="https://druxtjs.org">
-  <img src=".github/banner.svg" alt="@druxt-contrib/config-pages: Config Pages module for Druxt">
+  <img src="https://raw.githubusercontent.com/druxt-contrib/druxt-config-pages/0.x/.github/banner.svg" alt="@druxt-contrib/config-pages: Config Pages module for Druxt">
 </a>
 <!-- vale on -->
 
@@ -88,6 +88,6 @@ These pages are also published as a [documentation site](https://contrib.druxtjs
 - [Reading configuration](docs/usage.md): the plugin, the store, the field
   names and when the values are read
 - [Troubleshooting](docs/troubleshooting.md)
-- [The example](https://github.com/druxt-contrib/druxt-config-pages/tree/develop/example),
+- [The example](https://github.com/druxt-contrib/druxt-config-pages/tree/0.x/example),
   a Nuxt site and a Drupal site with Config Pages
 - [Contributing](CONTRIBUTING.md)

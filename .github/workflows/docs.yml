@@ -13,7 +13,8 @@ name: Docs
 
 on:
   push:
-    branches: [develop]
+    # A pattern, not a list, so a version branch cut per major stays visible.
+    branches: ['*.x']
     # GitHub Actions does not support YAML anchors, so this list is written
     # twice rather than shared.
     paths:
@@ -94,11 +95,11 @@ jobs:
         with:
           path: docs-site/dist
 
-  # Only the release branch is served. The environment is what gives the job
-  # the Pages deployment, and it carries the URL the run reports.
+  # Only the trunk is served. The environment is what gives the job the Pages
+  # deployment, and it carries the URL the run reports.
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/0.x'
     runs-on: ubuntu-latest
     permissions:
       pages: write
