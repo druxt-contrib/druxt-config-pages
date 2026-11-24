@@ -17,7 +17,7 @@
 > Decoupled Drupal configuration pages for Druxt
 
 The DruxtConfigPages module consumes configuration data from the Drupal Config
-Pages module and makes it easily accessible with a Vuex store and Nuxt plugin.
+Pages module and makes it accessible with a Vuex store and Nuxt plugin.
 
 ```js
 $druxtConfigPages.get('foo.bar')
@@ -46,13 +46,15 @@ $druxtConfigPages.get('foo.bar')
 2. Create at least one Config Page type and entity:
    `/admin/structure/config_pages/types`
 
-3. Add the **"View the [foo] config page entity"** permission to the required Druxt role(s).
+3. Add the **"View the [foo] config page entity"** permission to the required Druxt roles.
 
-### Nuxt.js
+### Nuxt
 
 1. Install the Nuxt modules:
 
-   `$ npm install druxt @druxt-contrib/config-pages`
+   ```sh
+   npm install druxt @druxt-contrib/config-pages
+   ```
 
 2. Add module to `nuxt.config.js`
 
