@@ -1,13 +1,14 @@
 <!-- vale off -->
 <!-- The alt text describes what the banner shows: the @druxt-contrib/config-pages mark, name and description. The name-colon-description form trips ColonUsage. -->
 <a href="https://druxtjs.org">
-  <img src=".github/banner.svg" alt="@druxt-contrib/config-pages: Config Pages module for Druxt">
+  <img src="https://raw.githubusercontent.com/druxt-contrib/druxt-config-pages/0.x/.github/banner.svg" alt="@druxt-contrib/config-pages: Config Pages module for Druxt">
 </a>
 <!-- vale on -->
 
 # DruxtConfigPages
 
 [![npm](https://img.shields.io/npm/v/@druxt-contrib/config-pages)](https://www.npmjs.com/package/@druxt-contrib/config-pages)
+[![Docs](https://img.shields.io/badge/docs-online-blue)](https://contrib.druxtjs.org/druxt-config-pages/)
 [![npm@dev](https://img.shields.io/npm/v/@druxt-contrib/config-pages/dev)](https://www.npmjs.com/package/@druxt-contrib/config-pages/v/dev)
 [![CI](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/druxt-contrib/druxt-config-pages/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/druxt-contrib/druxt-config-pages/branch/develop/graph/badge.svg)](https://codecov.io/gh/druxt-contrib/druxt-config-pages)
@@ -40,6 +41,8 @@ $druxtConfigPages.get('foo.bar')
 ## Install and setup
 
 ### Drupal
+
+[Drupal setup](docs/drupal-setup.md) covers each of these in full.
 
 1. Install and enable the [Drupal Config Pages module](https://www.drupal.org/project/config_pages) on your Druxt backend.
 
@@ -75,3 +78,16 @@ $druxtConfigPages.get('foo.bar')
 | Option                    | Type    | Required | Default | Description                    |
 | ------------------------- | ------- | -------- | ------- | ------------------------------ |
 | `druxt.configPages.pages` | `array` | Yes      | `[]`    | An array of Config Page types. |
+
+## More documentation
+
+These pages are also published as a [documentation site](https://contrib.druxtjs.org/druxt-config-pages/).
+
+- [Drupal setup](docs/drupal-setup.md): the module, a configuration page type,
+  fields and permissions
+- [Reading configuration](docs/usage.md): the plugin, the store, the field
+  names and when the values are read
+- [Troubleshooting](docs/troubleshooting.md)
+- [The example](https://github.com/druxt-contrib/druxt-config-pages/tree/0.x/example),
+  a Nuxt site and a Drupal site with Config Pages
+- [Contributing](CONTRIBUTING.md)

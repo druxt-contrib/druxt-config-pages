@@ -42,14 +42,16 @@ libsqlite
 libxml
 libzip
 Licence
+llms
 lndo
 mailhog
 markdownlint
 mise
 networkidle
 nproc
-Nuxt
 nuxt
+Nuxt
+nuxtjs
 nvm
 nvmrc
 octref
